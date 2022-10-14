@@ -12,11 +12,12 @@ public class RandomHelper : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // When player hit the diamond, the diamond becomes
+    // random CookingHelper and diamond disappears;
     public void GetHelper()
     {
-        Vector3 pos = transform.position;
-        Instantiate(helper[Random.Range(0, helper.Length)], pos, Quaternion.identity);
+        Vector3 position = transform.position;
+        Instantiate(helper[Random.Range(0, helper.Length)],position, Quaternion.identity);
         Destroy(diamond);
 
     }
